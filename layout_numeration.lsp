@@ -15,7 +15,7 @@
         (setq txtObj (entget ent))  
         
         ;; Replace text with reverse order of index
-        (setq txtObj (subst (cons 1 (itoa (- (1+ layoutCount) index))) (assoc 1 txtObj) txtObj))  
+        (setq txtObj (subst (cons 1 (itoa (- layoutCount index))) (assoc 1 txtObj) txtObj))  
         
         (entmod txtObj)  ; Update object
         (entupd ent)  ; Ensure changes
